@@ -1,0 +1,213 @@
+# Swahili translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-11-21 13:42+0300\n"
+"PO-Revision-Date: 2023-11-20 21:27+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sw\n"
+"Language-Team: sw <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: app/__init__.py:25
+msgid "Please login first to access this page"
+msgstr "Tafadhali ingia kwenye akaunti yako kwanza ili kutazama ukurasa huu"
+
+#: app/email.py:19
+msgid "[Flasky] Reset Your Password"
+msgstr "[Flasky] badilisha neno siri lako"
+
+#: app/forms.py:9 app/forms.py:40
+msgid "Email"
+msgstr "Wavuti"
+
+#: app/forms.py:10 app/forms.py:44
+msgid "Password"
+msgstr "Neno siri"
+
+#: app/forms.py:11
+msgid "Remember Me"
+msgstr "Nikumbuke"
+
+#: app/forms.py:12 app/templates/base.html:28
+msgid "Login"
+msgstr "Ingia"
+
+#: app/forms.py:15 app/forms.py:21
+msgid "Username"
+msgstr "Jina Lako"
+
+#: app/forms.py:16
+msgid "Confirm Password"
+msgstr "Thibitisha Neno Siri"
+
+#: app/forms.py:17 app/templates/base.html:29
+msgid "Register"
+msgstr "Jiandikishe"
+
+#: app/forms.py:22
+msgid "About me"
+msgstr "Kunihusu"
+
+#: app/forms.py:23 app/forms.py:37
+msgid "Submit"
+msgstr "Wasilisha"
+
+#: app/forms.py:36
+msgid "Post"
+msgstr "Posti"
+
+#: app/forms.py:41 app/forms.py:47
+msgid "Request Password Reset"
+msgstr "Wasilisha Ombi La Kubadilisha Neno Siri"
+
+#: app/forms.py:46
+msgid "Repeat Password"
+msgstr "Rudia Neno Siri"
+
+#: app/routes.py:32
+msgid "Posted"
+msgstr "Imepostiwa"
+
+#: app/routes.py:62
+msgid "Your account has been created!"
+msgstr "Accounti yako imetengenezwa"
+
+#: app/routes.py:77
+msgid "Check your credentials and try again!"
+msgstr "Pigia Msasa Jina Ama Neno Siri Na Ujaribu Tena"
+
+#: app/routes.py:110
+msgid "updated ✔"
+msgstr "Imeidhinishwa ✔"
+
+#: app/routes.py:126
+msgid "Check your email for the instructions to reset your password"
+msgstr "Masharti ya kubadilisha neno siri lako limetumwa kwenye wavuti wako"
+
+#: app/routes.py:141
+msgid "Your password has been reset."
+msgstr "Neno siri lako limebadilishwa"
+
+#: app/templates/404.html:4
+msgid "File Not Found"
+msgstr "Ukurasa huu haupo"
+
+#: app/templates/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "Tumepata hitilafu ya kimtambo"
+
+#: app/templates/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "Wanamitambo wamejulishwa.Samahani kwa hitilafu hii."
+
+#: app/templates/500.html:6
+msgid "Back"
+msgstr "Nyuma"
+
+#: app/templates/_post.html:11
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr "%(username)s alisema %(when)s"
+
+#: app/templates/about.html:3
+#, fuzzy
+msgid "About Page"
+msgstr "Kunihusu"
+
+#: app/templates/base.html:10
+msgid "Welcome to this blog"
+msgstr "Karibu kwenye ukurasa huu"
+
+#: app/templates/base.html:23
+msgid "Home"
+msgstr "Nyumbani"
+
+#: app/templates/base.html:26
+msgid "Explore"
+msgstr "Vumbua"
+
+#: app/templates/base.html:31
+msgid "Profile"
+msgstr "Wasifu"
+
+#: app/templates/base.html:32
+msgid "Logout"
+msgstr "Toka"
+
+#: app/templates/edit_profile.html:3
+#, fuzzy
+msgid "Edit Profile"
+msgstr "Badilisha wasifu?"
+
+#: app/templates/index.html:3
+#, fuzzy, python-format
+msgid "Hi @ %(username)s!"
+msgstr "Karibu @%(username)s!"
+
+#: app/templates/index.html:22
+msgid "Newer posts"
+msgstr "Posti Mpya"
+
+#: app/templates/index.html:25
+msgid "Older posts"
+msgstr "Posti za kitambo"
+
+#: app/templates/login.html:5
+msgid "Login To Your Account"
+msgstr "Ingia kwenye akaunti yako"
+
+#: app/templates/login.html:28
+#, fuzzy
+msgid "Forgot Password?"
+msgstr "Rudia Neno Siri"
+
+#: app/templates/register.html:5
+msgid "Join Us Today"
+msgstr "Jiunge nasi Leo"
+
+#: app/templates/register.html:37
+msgid "Already have an account?"
+msgstr "Tayari una akaunti?"
+
+#: app/templates/user.html:6
+#, python-format
+msgid "User: %(u)s"
+msgstr "Mtumizi: %(u)s"
+
+#: app/templates/user.html:15
+#, python-format
+msgid "Last Seen: %(l_seen)s "
+msgstr "Alionekana: %(l_seen)s "
+
+#: app/templates/user.html:21
+#, python-format
+msgid "About Me:%(about_me)s "
+msgstr "Kunihusu:%(about_me)s "
+
+#: app/templates/user.html:29
+msgid "Edit Profile?"
+msgstr "Badilisha wasifu?"
+
+#: app/templates/user.html:35
+#, fuzzy, python-format
+msgid "My Posts( %(total_posts)s posts)"
+msgstr "Posti Zangu(posti %(total_posts)s )"
+
+#: app/templates/user.html:41
+msgid "Older Posts"
+msgstr "Posti za kitambo"
+
+#: app/templates/user.html:47
+msgid "Newer Posts"
+msgstr "Posti mpya"
+

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block app_content %}
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <h1>{{_('Login To Your Account')}}</h1>
+        <div>
+            <p>{{ form.email.label }}
+                {{ form.email()}}
+                {% for error in  form.email.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.password.label }}
+                {{ form.password() }}
+                {% for error in form.password.errors %}
+                <span>{{ error}}</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.remember.label }}
+                {{ form.remember() }}
+            </p>
+            <p>
+                {{ form.submit() }}
+            </p>
+        </div>
+    </form>
+    <small>
+        <a href="{{ url_for('reset_password_request') }}">{{_('Forgot Password?')}}</a>
+    </small>
+{% endblock app_content %}

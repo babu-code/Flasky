@@ -1,0 +1,152 @@
+2023-11-21 09:01:24,638 ERROR: Exception on /explore [GET] [in C:\Py\venv\Lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\Flasky\app\routes.py", line 47, in explore
+    return render_template('index.html',title='Explore', posts=posts.items,next_url=next_url, prev_url=prev_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Py\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Py\Flasky\app\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Py\Flasky\app\templates\base.html", line 18, in top-level template code
+    {% block navbar %}
+  File "C:\Py\Flasky\app\templates\base.html", line 25, in block 'navbar'
+    {{ _('%(home_link)s') }}
+  File "C:\Py\venv\Lib\site-packages\jinja2\ext.py", line 167, in _gettext_alias
+    return __context.call(__context.resolve("gettext"), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\jinja2\ext.py", line 179, in gettext
+    return rv % variables  # type: ignore
+           ~~~^~~~~~~~~~~
+  File "C:\Py\venv\Lib\site-packages\markupsafe\__init__.py", line 115, in __mod__
+    return self.__class__(super().__mod__(arg))
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\markupsafe\__init__.py", line 272, in __getitem__
+    return _MarkupEscapeHelper(self.obj[item], self.escape)
+                               ~~~~~~~~^^^^^^
+KeyError: 'home_link'
+2023-11-21 09:04:04,962 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 09:14:44,472 ERROR: Exception on /explore [GET] [in C:\Py\venv\Lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\Flasky\app\routes.py", line 47, in explore
+    return render_template('index.html',title='Explore', posts=posts.items,next_url=next_url, prev_url=prev_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Py\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Py\Flasky\app\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Py\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Py\Flasky\app\templates\base.html", line 24, in template
+    {% end set %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'end'. Jinja was looking for the following tags: 'endset'. The innermost block that needs to be closed is 'set'.
+2023-11-21 09:24:13,810 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 09:25:21,887 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 09:34:10,181 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 09:37:59,722 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 09:49:21,112 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 09:51:16,250 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 10:37:43,353 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 10:45:48,011 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 11:12:07,873 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 11:19:46,349 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 11:46:39,847 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 11:51:09,193 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 11:56:43,141 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 11:57:50,915 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 12:55:51,529 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 13:01:49,819 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 13:40:07,342 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 13:40:57,593 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 13:43:08,110 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 20:27:57,239 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-21 20:28:45,115 ERROR: Exception on /user/Shayenne [GET] [in C:\Py\venv\Lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\Flasky\app\routes.py", line 101, in user
+    return render_template('user.html', title='Profile Page', user = user, posts = posts, next_url=next_url, prev_url=prev_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Py\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Py\Flasky\app\templates\user.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Py\Flasky\app\templates\base.html", line 38, in top-level template code
+    {% block container %}
+  File "C:\Py\Flasky\app\templates\base.html", line 46, in block 'container'
+    {% block app_content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\Flasky\app\templates\user.html", line 11, in block 'app_content'
+    {{ moment.lang(g.locale()) }}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'str' object is not callable
+2023-11-21 20:30:02,546 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-22 13:49:24,385 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-22 13:51:00,381 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]
+2023-11-22 13:52:53,396 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:55]

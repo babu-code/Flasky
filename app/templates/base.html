@@ -1,0 +1,96 @@
+
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+
+    {% block title %}
+    
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>{{_('Welcome to this blog')}}</title>
+    {% endif %}
+    {% endblock title %}
+ </head>
+    
+    
+
+<body>
+{% block navbar %} 
+
+    <nav>
+        <h3>Flasky</h3>
+        <li>
+            <a href="{{ url_for('index')}}">{{_('Home')}}</a>
+            
+        </li>
+        <li><a href="{{url_for('explore')}}">{{_('Explore')}}</a></li>
+        {% if current_user.is_anonymous %}
+        <li><a href="{{ url_for('login')}}">{{_('Login') }}</a></li>
+         <li><a href="{{ url_for('register')}}">{{_('Register') }}</a></li>
+                {% else %}
+        <li><a href="{{url_for('user', username = current_user.username)}}">{{_('Profile')}}</a></li>
+        <li><a href="{{url_for('logout')}}">{{ _('Logout') }}</a></li>
+
+        {% endif %}
+        
+    </nav>
+{% endblock navbar %}
+{% block container %}
+    <div>{% with messages = get_flashed_messages(with_categories=true) %}
+            {% for category, message in messages %}
+                <span>{{ message }}</span>
+            {% endfor %} 
+        {% endwith %}
+    </div>
+    <div class="main">
+        {% block app_content %}{% endblock %}
+        
+    </div>
+    
+{% endblock container %}
+{% block scripts %} 
+            {{ moment.include_moment() }}
+            {{ moment.lang(g.locale) }}
+            <script src="{{url_for('static', filename='momentWithLocales.js')}}"></script>
+            <script src="{{url_for('static', filename='jquery.js')}}"></script>
+            <script>
+                // function translate(sourceElem, destElem, source_lang, dest_lang){
+                //     $(destElem).html('<img src="{{ url_for('static', filename='loading.gif')}}">');
+                //     $.post('/translate', {
+                //         text: $(sourceElem).text(),
+                //         source_lang: sourceLang,
+                //         dest_lang : destLang
+                        
+                //     }).done(function(response){
+                //         $(destElem).text(response['text'])
+                //     }).fail(function(){
+                //         $(destElem).text("{{ _('Error: Could not contact server.')}}");
+                //     });
+                // }
+
+           function translate(sourceElem, destElem, sourceLang, destLang){
+                $(destElem).html('<img src="{{ url_for('static', filename='loading.gif')}}" >');
+                    $.ajax({
+                        url: '/translate',
+                        type: 'post',
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        data: JSON.stringify({
+                            text: $(sourceElem).text(),
+                            sourceLang: sourceLang,
+                            destLang : destLang
+                        }),
+                        success: function(response){
+                            $(destElem).text(response['text'])
+                        },
+                        error: function(){
+                            $(destElem).text("{{_('Error: could not contact server!')}}");
+                        }
+                    });
+            }
+                
+                            
+                        
+                </script>
+    {% endblock  %}
+

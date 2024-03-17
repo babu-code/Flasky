@@ -1,0 +1,125 @@
+2023-11-09 13:49:52,989 ERROR: Exception on /reset_password_request [POST] [in C:\Py\venv\Lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Py\venv\Lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "C:\Py\venv\Lib\site-packages\flask_mail.py", line 427, in send
+    connection.send(self)
+  File "C:\Py\venv\Lib\site-packages\flask_mail.py", line 188, in send
+    self.host.sendmail(sanitize_address(envelope_from or message.sender),
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 872, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 611, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+                   ^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 451, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 378, in putcmd
+    self.send(f'{s}{CRLF}')
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 365, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\Flasky\app\routes.py", line 117, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Py\Flasky\app\email.py", line 13, in send_password_reset_email
+    send_email('[Flasky] Reset Your Password',
+  File "C:\Py\Flasky\app\email.py", line 9, in send_email
+    mail.send(msg)
+  File "C:\Py\venv\Lib\site-packages\flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "C:\Py\venv\Lib\site-packages\flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 1004, in quit
+    res = self.docmd("quit")
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 431, in docmd
+    self.putcmd(cmd, args)  A
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 378, in putcmd
+    self.send(f'{s}{CRLF}')
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 365, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+2023-11-09 13:52:22,091 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-09 14:07:54,202 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-09 14:08:02,599 ERROR: Exception on /reset_password_request [POST] [in C:\Py\venv\Lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\Flasky\app\routes.py", line 117, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Py\Flasky\app\email.py", line 13, in send_password_reset_email
+    send_email('[Flasky] Reset Your Password',
+  File "C:\Py\Flasky\app\email.py", line 9, in send_email
+    mail.send(msg)
+  File "C:\Py\venv\Lib\site-packages\flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "C:\Py\venv\Lib\site-packages\flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Py\venv\Lib\site-packages\flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 851, in create_connection
+    raise exceptions[0]
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1008.0_x64__qbz5n2kfra8p0\Lib\socket.py", line 836, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+2023-11-09 20:15:15,906 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-09 20:27:04,970 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-10 13:42:43,263 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-10 13:44:55,442 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-10 13:46:33,818 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-10 13:47:26,790 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-10 17:20:48,029 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-10 17:23:22,132 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-10 17:24:28,574 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-10 21:41:33,593 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-10 21:46:51,125 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-14 14:37:04,883 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-14 14:37:16,424 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-14 14:38:32,721 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-14 14:38:38,570 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:45]
+2023-11-16 19:49:39,861 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:47]
+2023-11-17 19:47:10,441 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:47]
+2023-11-17 20:09:00,852 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:47]
+2023-11-17 20:13:16,627 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:47]
+2023-11-17 20:21:24,191 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:47]
+2023-11-17 20:21:51,848 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:47]
+2023-11-20 08:53:26,326 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:49]
+2023-11-20 09:13:16,806 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:49]
+2023-11-20 09:13:49,812 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:49]
+2023-11-20 09:14:34,772 INFO: Flasky startup [in C:\Py\Flasky\app\__init__.py:49]

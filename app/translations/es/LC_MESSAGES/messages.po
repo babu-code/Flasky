@@ -1,0 +1,212 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-11-21 13:42+0300\n"
+"PO-Revision-Date: 2023-11-21 13:10+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: app/__init__.py:25
+msgid "Please login first to access this page"
+msgstr "Por favor inicie session primero para acceder a esta pagina"
+
+#: app/email.py:19
+msgid "[Flasky] Reset Your Password"
+msgstr "[Flasky] Restablecer su contrasena"
+
+#: app/forms.py:9 app/forms.py:40
+msgid "Email"
+msgstr "correo electronico"
+
+#: app/forms.py:10 app/forms.py:44
+msgid "Password"
+msgstr "contrasena"
+
+#: app/forms.py:11
+msgid "Remember Me"
+msgstr "Acuerdate de mi"
+
+#: app/forms.py:12 app/templates/base.html:28
+msgid "Login"
+msgstr "Acceso"
+
+#: app/forms.py:15 app/forms.py:21
+msgid "Username"
+msgstr "Nomber de usuario"
+
+#: app/forms.py:16
+msgid "Confirm Password"
+msgstr "Nueva Contrasena"
+
+#: app/forms.py:17 app/templates/base.html:29
+msgid "Register"
+msgstr "Registro"
+
+#: app/forms.py:22
+msgid "About me"
+msgstr "Registrarse sobre mi"
+
+#: app/forms.py:23 app/forms.py:37
+msgid "Submit"
+msgstr "Entregar"
+
+#: app/forms.py:36
+msgid "Post"
+msgstr "Correo"
+
+#: app/forms.py:41 app/forms.py:47
+msgid "Request Password Reset"
+msgstr "Peticion para la recuperacion de contrasena"
+
+#: app/forms.py:46
+msgid "Repeat Password"
+msgstr "Repita la contrasena"
+
+#: app/routes.py:32
+msgid "Posted"
+msgstr "Al Corriente"
+
+#: app/routes.py:62
+msgid "Your account has been created!"
+msgstr ""
+
+#: app/routes.py:77
+msgid "Check your credentials and try again!"
+msgstr "Comprueba tus credenciales y vuelve a interntarlo"
+
+#: app/routes.py:110
+msgid "updated ✔"
+msgstr "Actualizado ✔ "
+
+#: app/routes.py:126
+msgid "Check your email for the instructions to reset your password"
+msgstr ""
+"Revise su correo electronico para obtener instrucciones para restablecer "
+"su contrasena"
+
+#: app/routes.py:141
+msgid "Your password has been reset."
+msgstr "Tu contrasena ha sido restablecida"
+
+#: app/templates/404.html:4
+msgid "File Not Found"
+msgstr "Archivo no encontrado"
+
+#: app/templates/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "Ha occurado un error inesperado"
+
+#: app/templates/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "La administador ha sido notificada"
+
+#: app/templates/500.html:6
+msgid "Back"
+msgstr "Atras"
+
+#: app/templates/_post.html:11
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr "%(username)s dijo %(when)s"
+
+#: app/templates/about.html:3
+msgid "About Page"
+msgstr "Acerca de la pagina"
+
+#: app/templates/base.html:10
+msgid "Welcome to this blog"
+msgstr "Bienvenido a este blog"
+
+#: app/templates/base.html:23
+msgid "Home"
+msgstr "Hogar"
+
+#: app/templates/base.html:26
+msgid "Explore"
+msgstr "Explorar"
+
+#: app/templates/base.html:31
+msgid "Profile"
+msgstr "Perfil"
+
+#: app/templates/base.html:32
+msgid "Logout"
+msgstr "Cerrar sesion"
+
+#: app/templates/edit_profile.html:3
+msgid "Edit Profile"
+msgstr "Editar Perfil"
+
+#: app/templates/index.html:3
+#, python-format
+msgid "Hi @ %(username)s!"
+msgstr "Hola @ %(username)s!"
+
+#: app/templates/index.html:22
+msgid "Newer posts"
+msgstr "Publicaciones nuevas"
+
+#: app/templates/index.html:25
+msgid "Older posts"
+msgstr "Publicaciones viejas"
+
+#: app/templates/login.html:5
+msgid "Login To Your Account"
+msgstr "Ingrese a su cuenta"
+
+#: app/templates/login.html:28
+msgid "Forgot Password?"
+msgstr "Has olvidado tu contrasena"
+
+#: app/templates/register.html:5
+msgid "Join Us Today"
+msgstr "Unete a nosotras hoy"
+
+#: app/templates/register.html:37
+msgid "Already have an account?"
+msgstr "Ya tienes una cuenta?"
+
+#: app/templates/user.html:6
+#, python-format
+msgid "User: %(u)s"
+msgstr "Usuario : %(u)s"
+
+#: app/templates/user.html:15
+#, python-format
+msgid "Last Seen: %(l_seen)s "
+msgstr "ultima vez visto: %(l_seen)s "
+
+#: app/templates/user.html:21
+#, python-format
+msgid "About Me:%(about_me)s "
+msgstr "Acerca de mi :%(about_me)s"
+
+#: app/templates/user.html:29
+msgid "Edit Profile?"
+msgstr "Editar Perfil?"
+
+#: app/templates/user.html:35
+#, python-format
+msgid "My Posts( %(total_posts)s posts)"
+msgstr "Mi Publicaciones ( Publicaciones %(total_posts)s )"
+
+#: app/templates/user.html:41
+msgid "Older Posts"
+msgstr "Publicaciones viejas"
+
+#: app/templates/user.html:47
+msgid "Newer Posts"
+msgstr "Publicaciones nuevas"
+
