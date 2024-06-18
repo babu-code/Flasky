@@ -1,7 +1,9 @@
-Flasky
+**Flasky******
+
 Flasky is a microblogging application built using Flask, a lightweight and versatile web framework for Python. It allows users to create accounts, share posts, follow other users, and engage in discussions through comments.
 
 Features
+
 User Authentication: Secure user authentication system with registration, login, and logout functionality.
 Post Creation and Sharing: Users can create, edit, and delete their posts. Posts can include text, images, or links.
 User Profiles: Each user has a profile page displaying their information and list of posts.
@@ -9,7 +11,9 @@ Following System: Users can follow other users to see their posts in their timel
 Comments: Users can comment on posts and engage in discussions.
 Pagination: Pagination for posts, followers, and followed users to optimize performance.
 Email Notifications: Email notifications for account activation and password reset requests.
+
 Installation
+
 Clone the repository:
 bash
 Copy code
@@ -45,7 +49,9 @@ Initialize the database:
 bash
 Copy code
 flask db upgrade
+
 Run the application:
+
 bash
 Copy code
 flask run
